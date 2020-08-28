@@ -86,10 +86,9 @@ class App extends Component {
           {this.state.subject.subject}
         </header>  */}
         <TOC onChangePage={ 
-            function(){
+            function(id){
               this.setState({mode: "read", 
-              selected_content_id : 0});
-              alert('hi');
+              selected_content_id : Number(id)});
             }.bind(this) } 
             data = {this.state.contents}></TOC>
         <Content title = {_title} subject = {_desc}></Content>
@@ -98,3 +97,9 @@ class App extends Component {
   }
 }
 export default App;
+
+
+/*
+  props는 readonly 
+  state는 setState를 통해서 값 변경 가능
+*/
