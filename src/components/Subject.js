@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 class Subject extends Component { //컴포넌트는 하나의 최상의 태그만 사용해야 한다!
 
     render(){
+      console.log("Subject render")
       return(
         <header>
           <h2><a href="/" onClick={
